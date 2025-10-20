@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FashionMart.Domain.Entities;
+﻿namespace FashionMart.Domain.Entities;
 
 public class CartItem
 {
@@ -12,6 +6,7 @@ public class CartItem
     public long CartId { get; set; }
     public long ProductId { get; set; }
     public int Quantity { get; set; }
+    public string Size { get; set; } = default!;
 
     // Navigation
     public Cart Cart { get; set; } = default!;

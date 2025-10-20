@@ -1,29 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FashionMart.Domain.Entities;
+﻿namespace FashionMart.Domain.Entities;
 
 public class Payment
 {
     public long PaymentId { get; set; }
+
+    // Foreign Keys
     public long OrderId { get; set; }
+    public long UserId { get; set; }
+    public long PaymentMethodId { get; set; }
+    public long PaymentStatusId { get; set; }
 
-    // To‘lov turi: Naqd, Click, Payme, UzumPay va h.k.
-    public PaymentMethod Method { get; set; }                           //enum PaymentMethod dan foydalaniladi
-
-    // To‘lov miqdori
-    public decimal Amount { get; set; }
-
-    // To‘lov holati: Pending, Paid, Failed
-    public PaymentStatus Status { get; set; } = PaymentStatus.Pending; //enum PaymentStatus dan foydalaniladi
-
-    // To‘lov sanasi
-    public DateTime PaymentDate { get; set; } = DateTime.UtcNow;
-
-    // Navigation
+    // Navigation properties
     public Order Order { get; set; } = default!;
+    public User User { get; set; } = default!;
+    public PaymentMethod PaymentMethod { get; set; } = default!;
+    public PaymentStatus PaymentStatus { get; set; } = default!;
+    public decimal Amount { get; set; }
+    public DateTime PaymentDate { get; set; } = DateTime.UtcNow;
 }
+
 

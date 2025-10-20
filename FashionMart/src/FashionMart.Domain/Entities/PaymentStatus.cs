@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace FashionMart.Domain.Entities;
 
-namespace FashionMart.Domain.Entities;
-
-public enum PaymentStatus
+public class PaymentStatus
 {
-    Pending,   // To‘lov kutilmoqda
-    Paid,      // To‘lov muvaffaqiyatli amalga oshdi
-    Failed     // To‘lov bajarilmadi (xato)
+    public long Id { get; set; }
+    public string Name { get; set; }
+    public ICollection<Payment> Payments { get; set; } = new List<Payment>();
 }

@@ -1,13 +1,8 @@
 ﻿using FashionMart.Domain.Interface;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace FashionMart.Application.Payment;
 
-public class PaymentContext : IPaymentContext   
+public class PaymentContext : IPaymentContext
 {
     private IPaymentStrategy _paymentStrategy;
 

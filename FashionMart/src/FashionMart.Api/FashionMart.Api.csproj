@@ -16,10 +16,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Configurations\" />
     <Folder Include="Endpoints\" />
-    <Folder Include="Middlewares\" />
-    <Folder Include="Filters\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FashionMart.Application\FashionMart.Application.csproj" />
+    <ProjectReference Include="..\FashionMart.Core\FashionMart.Core.csproj" />
+    <ProjectReference Include="..\FashionMart.Infrastructure\FashionMart.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

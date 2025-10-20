@@ -21,8 +21,11 @@
 
   <ItemGroup>
     <Folder Include="Migrations\" />
-    <Folder Include="Persistance\Configurations\" />
     <Folder Include="Persistance\Repositories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FashionMart.Domain\FashionMart.Domain.csproj" />
   </ItemGroup>
 
 </Project>

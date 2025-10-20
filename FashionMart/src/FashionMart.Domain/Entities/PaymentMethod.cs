@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace FashionMart.Domain.Entities;
 
-namespace FashionMart.Domain.Entities;
-
-public enum PaymentMethod
+public class PaymentMethod
 {
-    Cash,       // Naqd
-    Click,      // Click orqali
-    Payme,      // Payme orqali
-    Uzum,       // Uzum Nasiya yoki UzumPay
-    Apelsin     // Yoki boshqa qo‘shimcha variantlar
+    public long Id { get; set; }
+    public string Name { get; set; } = default!;
+    public ICollection<Payment> Payments { get; set; } = new List<Payment>();
 }

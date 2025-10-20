@@ -1,4 +1,6 @@
 
+using FashionMart.Api.Configurations;
+
 namespace FashionMart.Api
 {
     public class Program
@@ -13,6 +15,11 @@ namespace FashionMart.Api
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.ConfigureDB();
+            builder.Configure();
+
+
 
             var app = builder.Build();
 
@@ -29,6 +36,12 @@ namespace FashionMart.Api
 
 
             app.MapControllers();
+            //app.MapAuthEndpoints();
+            //app.MapAdminEndpoints();
+            //app.MapCourierEndpoints();
+            //app.MapCustomerEndpoints();
+            //app.MapRoleEndpoints();
+
 
             app.Run();
         }
